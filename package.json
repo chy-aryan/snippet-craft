@@ -2,7 +2,7 @@
   "name": "snippetcraft",
   "displayName": "SnippetCraft - Custom Code Templates",
   "description": "Create, store, and auto-complete your custom functions and templates using simple keywords in seconds.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "aryan-kumar",
   "engines": {
     "vscode": "^1.85.0"
@@ -12,7 +12,15 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.createSnippet"
+    "onCommand:extension.createSnippet",
+    "onLanguage:cpp",
+    "onLanguage:javascript",
+    "onLanguage:python",
+    "onLanguage:java",
+    "onLanguage:c",
+    "onLanguage:csharp",
+    "onLanguage:go",
+    "onLanguage:ruby"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -20,6 +28,48 @@
       {
         "command": "extension.createSnippet",
         "title": "SnippetCraft: Create or Edit Snippet"
+      }
+    ],
+    "languages": [
+      {
+        "id": "cpp",
+        "aliases": ["C++", "cpp"],
+        "extensions": [".cpp", ".cc", ".cxx", ".h", ".hpp"]
+      },
+      {
+        "id": "javascript",
+        "aliases": ["JavaScript", "js"],
+        "extensions": [".js", ".mjs", ".cjs"]
+      },
+      {
+        "id": "python",
+        "aliases": ["Python", "python"],
+        "extensions": [".py"]
+      },
+      {
+        "id": "java",
+        "aliases": ["Java", "java"],
+        "extensions": [".java"]
+      },
+      {
+        "id": "c",
+        "aliases": ["C", "c"],
+        "extensions": [".c", ".h"]
+      },
+      {
+        "id": "csharp",
+        "aliases": ["C#", "csharp"],
+        "extensions": [".cs"]
+      },
+      {
+        "id": "go",
+        "aliases": ["Go", "go"],
+        "extensions": [".go"]
+      },
+      {
+        "id": "ruby",
+        "aliases": ["Ruby", "ruby"],
+        "extensions": [".rb"]
       }
     ]
   },
