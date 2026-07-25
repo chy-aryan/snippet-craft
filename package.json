@@ -1,0 +1,43 @@
+{
+  "name": "snippet-craft",
+  "displayName": "SnippetCraft - Custom Code Templates",
+  "description": "Create, store, and auto-complete your custom functions and templates using simple keywords in seconds.",
+  "version": "1.0.0",
+  "publisher": "aryan-kumar",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createSnippet"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createSnippet",
+        "title": "SnippetCraft: Create or Edit Snippet"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
